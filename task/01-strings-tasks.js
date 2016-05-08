@@ -288,8 +288,13 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-    return value.index();
+
+  //for ( var n = 0; n < value.length; n++ ) {
+  //    return value.indexOf(value[n]);
+  //} return value.indexOf(value[n]);
+    throw new Error('Not implemented');
 }
+
 
 
 module.exports = {
