@@ -111,9 +111,13 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-    var deltaX = x2 - x1;
-    var deltaY = y2 - y1;
-    return Math.tan(deltaX, deltaY);
+    var deltaX = x2 - x1,
+        deltaY = y2 - y1;
+    if (Math.abs(deltaX) === 2 || Math.abs(deltaY) === 2) {
+        return Math.PI
+    } else if (Math.abs(deltaX) === 0 && Math.abs(deltaY) === 0) {
+        return 0
+    } else return Math.PI/2
 }
 
 /**

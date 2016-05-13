@@ -14,7 +14,7 @@
  * Returns an index of the specified element in array or -1 if element is not found
  * 
  * @param {array} arr
- * @param {any} value
+ * @param {some} value
  * @return {number}
  * 
  * @example
@@ -23,7 +23,7 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-   throw new Error('Not implemented');
+   return arr.indexOf(value);
 }
 
 /**
@@ -38,6 +38,13 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
+   //var arr = [];
+   //for (var i = 0; i < len; i++) {
+   //   var j = (-1 + 2)*i;
+   //   arr.splice(0, 0, j+i)
+   //}
+   //return arr;
+
    throw new Error('Not implemented');
 }
 
@@ -70,7 +77,10 @@ function doubleArray(arr) {
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
-   throw new Error('Not implemented');
+   var positiveArr = arr.filter(function(number) {
+      return number > 0;
+   });
+   return positiveArr;
 }
 
 /**
@@ -85,7 +95,10 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-   throw new Error('Not implemented');
+   var positiveArr = arr.filter(function(string) {
+      return typeof(string) == 'string';
+   });
+   return positiveArr;
 }
 
 /**
@@ -102,7 +115,10 @@ function getArrayOfStrings(arr) {
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
 function removeFalsyValues(arr) {
-   throw new Error('Not implemented');
+   var positiveArr = arr.filter(function(string) {
+      return string && true;
+   });
+   return positiveArr;
 }
 
 /**
@@ -116,7 +132,10 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-   throw new Error('Not implemented');
+   var arrUppercase = arr.map(function(string) {
+      return string.toUpperCase();
+   });
+   return arrUppercase;
 }
 
 
@@ -131,7 +150,10 @@ function getUpperCaseStrings(arr) {
  *    [ 'angular', 'react', 'ember' ] => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-   throw new Error('Not implemented');
+   var stringLength = arr.map(function(string) {
+      return string.length;
+   });
+   return stringLength;
 }
 
 /**
@@ -160,7 +182,7 @@ function insertItem(arr, item, index) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'a', 'b', 'c' ]
  */
 function getHead(arr, n) {
-   throw new Error('Not implemented');
+   return arr.splice(0, n, n);
 }
 
 
@@ -175,7 +197,7 @@ function getHead(arr, n) {
  *    [ 'a', 'b', 'c', 'd'], 3  => [ 'b', 'c', 'd' ]
  */
 function getTail(arr, n) {
-   throw new Error('Not implemented');
+   return arr.splice(arr.length-n, n);
 }
 
 
@@ -215,7 +237,10 @@ function toCsvText(arr) {
  *   [ 10, 100, -1 ]      => [ 100, 10000, 1 ]
  */
 function toArrayOfSquares(arr) {
-   throw new Error('Not implemented');
+   var numberSquared = arr.map(function(number) {
+      return number*number;
+   });
+   return numberSquared;
 }
 
 
